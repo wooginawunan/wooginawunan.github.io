@@ -29,7 +29,7 @@ layout: default
 <div class="blog">
     <h1>Study Notes:</h1>
     <ul>
-        {% for post in site.posts %}
+        {% for post in site.notes %}
         <li>
             <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
         </li>

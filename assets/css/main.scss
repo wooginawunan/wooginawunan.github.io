@@ -19,10 +19,10 @@ p {
 	line-height: 150%;
 }
 a {
-  color: $color-link;
+  color: rgb(92, 0, 179);
   text-decoration: none;
   &:visited {
-	color: $color-link;
+	color: rgb(92, 0, 179);
 	text-decoration: none;
   }
   &:hover {
@@ -30,7 +30,7 @@ a {
 	 text-decoration: none;
   }
   &:active {
-	color: $color-link;
+	color: rgb(92, 0, 179);
 	text-decoration: none;
   }
 }
@@ -158,7 +158,7 @@ blockquote {
 		}
 		a {
 			padding-bottom: 1px;
-			border-bottom: 1px solid $color-link;
+			border-bottom: 1px solid rgb(92, 0, 179);
 			&:hover {
 				background-color: $color-grey;
 				text-decoration: none;

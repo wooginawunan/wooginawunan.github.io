@@ -71,6 +71,7 @@ blockquote {
 	@media screen and (max-width: $br) {
 		display: block;
 	}
+	background-image:  url('http://goldwallpapers.com/uploads/posts/purple-textured-wallpaper/purple_textured_wallpaper_005.jpg')
 	h1 {
 		font-size: 4em;
 		margin-bottom: 0;
@@ -109,6 +110,22 @@ p#landing-page-text {
 	a {
 		padding: 5px;
 		padding-left: 10px;
+	}
+}
+
+.banner-top {
+	margin: 0;
+	padding: 0;
+
+	svg {
+		width: 100%;
+		vertical-align: top;
+	}
+
+	img {
+		width: 100%;
+		height: 12px;
+		vertical-align: top;
 	}
 }
 

@@ -1,10 +1,8 @@
 ---
 layout: post
-title: Paper Reading Notes - Visualising the data gradient and friends(1)
+title: Visualising and Understanding Convolutional Networks
 category: notes
 ---
-
-## Visualising and Understanding Convolutional Networks
 
 ##### Advantages for CNN:
 
@@ -13,7 +11,6 @@ category: notes
 * Powerful GPU implementations, making the training of very large models practical 
 
 * Better model regularisation strategies such as Drop out
-
 
 #### Paper Reading Notes -- Visualising the data gradient and friends
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visualising and Understanding Convolutional Networks
+title: Paper Reading Notes - Visualising and Understanding Convolutional Networks
 category: notes
 ---
 

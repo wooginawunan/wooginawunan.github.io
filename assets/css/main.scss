@@ -97,6 +97,12 @@ p#landing-page-text-small {
 }
 p#paper-info {
 	font-size: 0.8em;
+	color: $color-black;
+	font-style: italic;
+// 	margin-bottom: 15px;
+}
+p#paper-author {
+	font-size: 0.8em;
 	color: $color-grey;
 	font-style: italic;
 // 	margin-bottom: 15px;

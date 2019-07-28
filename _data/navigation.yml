@@ -1,5 +1,5 @@
-# - title: about
-#   url: /me
+- title: google-scholar
+  url: https://scholar.google.com/citations?user=le0K2coAAAAJ&hl=en
 
 - title: github
   url: https://github.com/wooginawunan
@@ -7,5 +7,5 @@
 - title: linkedin
   url: https://www.linkedin.com/in/nan-wu-41895bb7/
 
-- title: curriculum vitae
+- title: curriculum-vitae
   url: https://wooginawunan.github.io/assets/img/CV_NANWU.pdf

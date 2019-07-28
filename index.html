@@ -35,6 +35,7 @@ Currently, our research centres on both application and theoritical learning pro
 <p> </p>
 
 <p id="landing-page-text"> Check out for more: <a href="/me"> about me </a> </p>
+<p id="landing-page-text"> Check out for more: <a href="/me"> about me </a> </p>
 
 <div class="blog">
     <h1>Publications:</h1>
@@ -43,7 +44,8 @@ Currently, our research centres on both application and theoritical learning pro
       {% if post.work-type == 'Paper' %}
         <li>
           <p> {{ post.ref-title }}. </p>
-          <p id="paper-info"> {{ post.ref-authors }}. {{ post.ref-info }}. <a href="{{post.ref-link}}"> pdf </a> </p>
+          <p id="paper-author"> {{ post.ref-authors }}. </p>
+          <p id="paper-info"> {{ post.ref-info }}. <a href="{{post.ref-link}}"> pdf </a> </p>
         </li>
       {% endif %}
     {% endfor %}

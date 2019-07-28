@@ -120,6 +120,8 @@ p#landing-page-text-small {
 .banner-top {
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	background-color: #color-link;
 
 	svg {
 		width: 100%;
@@ -127,10 +129,10 @@ p#landing-page-text-small {
 	}
 
 	img {
-		width: 100%;
+		width: 471px;
 		height: 300px;
 		vertical-align: top;
-		background-color: #color-link;
+		
 		
 	}
 }

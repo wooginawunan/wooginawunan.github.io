@@ -14,16 +14,15 @@ layout: default
 
 <div class="header">
     <h1>{{ site.name }}</h1>
-    
-</div>
-
-<ul>
+    <ul>
         {% for item in site.data.navigation %}
         <li>
             <a href="{{ item.url }}">{{ item.title }}</a>
         </li>
         {% endfor %}
-</ul>
+    </ul>
+</div>
+
 
 <!-- <p id="landing-page-text"> Hi! My name is Nan Wu.</p> -->
 <p id="landing-page-text"> 你好哇. 我的战友。 </p>

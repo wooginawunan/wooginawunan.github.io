@@ -42,18 +42,12 @@ Currently, our research centres on both application and theoritical learning pro
     {% for post in site.categories.science %}
       {% if post.work-type == 'Paper' %}
         <li>
-<!--           <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
-            {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">
-            <h1>{{ post.ref-authors }} ({{ post.ref-year }}).</h1></a> -->
-          <p>
-            {{ post.ref-title }}. 
-          </p>
-          <p id="paper-info">{{ post.ref-authors }}.</p>
-          <p id="paper-info">{{ post.ref-info }}.</p>
-          <a href="{{post.ref-link}}">
-                pdf
-          </a>
+          <p> {{ post.ref-title }}. </p>
+          <p id="paper-info"> {{ post.ref-authors }}. </p>
+          <p id="paper-info"> {{ post.ref-info }}. </p>
+          <p id="paper-info"> <a href="{{post.ref-link}}"> pdf </a> </p>
         </li>
+      {% endif %}
     {% endfor %}
   <ul>
 </div>

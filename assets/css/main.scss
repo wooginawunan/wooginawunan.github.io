@@ -6,23 +6,24 @@
 
 body {
 	color: $color-black;
-	background: rgba(0,0,0,0.01);
-	font-family: 'Copse', ;
+	background: $color-grey;
+	font-family: 'Copse';
 	font-size: 110%;
 	font-weight: 400;
 }
 h1 {
 	margin-bottom: 5px;
 }
-p {
+p { 
+	color: $color-highlight;
 	font-size: 1em;
 	line-height: 150%;
 }
 a {
-  color: rgb(92, 0, 179);
+  color: $color-link;
   text-decoration: none;
   &:visited {
-	color: rgb(92, 0, 179);
+	color: $color-link;
 	text-decoration: none;
   }
   &:hover {
@@ -30,7 +31,7 @@ a {
 	 text-decoration: none;
   }
   &:active {
-	color: rgb(92, 0, 179);
+	color: $color-link;
 	text-decoration: none;
   }
 }

@@ -95,6 +95,12 @@ p#landing-page-text-small {
 	font-size: 1em;
 	margin-bottom: 15px;
 }
+p#paper-info {
+	font-size: 0.8em;
+	color: $color-grey;
+	font-style: italic;
+// 	margin-bottom: 15px;
+}
 
 .blog {
 	padding-bottom: 30px;
@@ -121,8 +127,6 @@ p#landing-page-text-small {
 	margin: 0;
 	padding: 0;
 	
-	
-
 	svg {
 		width: 100%;
 		vertical-align: top;
@@ -131,7 +135,6 @@ p#landing-page-text-small {
 	img {
 		width: 800px;
 		height: 400px;
-		vertical-align: top;
 		background-color: #color-link;
 		background-position: center;
 		
@@ -139,7 +142,8 @@ p#landing-page-text-small {
 }
 
 .banner {
-	width: 100%;
+// 	width: 100%;
+	width: 800px;
 	height: 300px;
 	background: #color-link url(assets/img/profile_photo.jpg) no-repeat center left;
 }

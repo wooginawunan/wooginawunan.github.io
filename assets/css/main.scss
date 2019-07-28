@@ -15,7 +15,6 @@ h1 {
 	margin-bottom: 5px;
 }
 p { 
-	color: $color-highlight;
 	font-size: 1em;
 	line-height: 150%;
 }
@@ -95,7 +94,7 @@ p#landing-page-text {
 .blog {
 	padding-bottom: 30px;
 	h1 {
-		color : #884dff;
+		color: $color-highlight;
 		font-size: 1.4em;
 		margin-bottom: 5px;
 	}

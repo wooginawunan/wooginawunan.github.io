@@ -38,13 +38,27 @@ Currently, our research centres on both application and theoritical learning pro
 
 <div class="blog">
     <h1>Publications:</h1>
-<!--     <ul>
-        {% for post in site.categories.project %}
-           <li>
-            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
-           </li>
-        {% endfor %}
-    </ul> -->
+  <ul>
+    {% for post in site.categories.science %}
+      {% if post.work-type == 'Paper' %}
+        <li>
+          <a href="{% if post.ref-doi %}http://dx.doi.org/{{ post.ref-doi }}
+            {% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">
+            <h2>{{ post.ref-authors }} ({{ post.ref-year }}).</h2></a>
+          <p>
+            {{ post.ref-title }}. 
+            <em>{{ post.ref-journal}}</em>
+            {% if post.ref-vol %}, {{ post.ref-vol }}{% endif %}. 
+            {% if post.ref-doi %}
+              <a href="http://dx.doi.org/{{ post.ref-doi }}">
+                doi: {{ post.ref-doi }}
+              </a>
+            {% endif %}
+          </p>
+        </li>
+      {% endif %}
+    {% endfor %}
+  <ul>
 </div>
 
 <div class="blog">

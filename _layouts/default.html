@@ -28,18 +28,78 @@ href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
     
     <div class="banner-top">
     <!-- :) -->
-      {% if page.image == "twitch" %}
-        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 10"><defs><style>.cls-1{fill:#f1eef7;}.cls-2{fill:#d7d0e8;}.cls-3{fill:#c3b8db;}.cls-4{fill:#ae9fcd;}.cls-5{fill:#9a86bf;}.cls-6{fill:#8b75b5;}.cls-7{fill:#7b61aa;}.cls-8{fill:#65459b;}</style></defs><title>twitch-banner-16</title><rect class="cls-1" y="-23.61" width="77.5" height="44.5"/><rect class="cls-2" x="77.5" y="-23.61" width="77.5" height="44.5"/><rect class="cls-3" x="155" y="-23.61" width="77.5" height="44.5"/><rect class="cls-4" x="232.5" y="-23.61" width="77.5" height="44.5"/><rect class="cls-5" x="310" y="-23.61" width="77.5" height="44.5"/><rect class="cls-6" x="387.5" y="-23.61" width="77.5" height="44.5"/><rect class="cls-7" x="465" y="-23.61" width="77.5" height="44.5"/><rect class="cls-8" x="542.5" y="-23.61" width="77.5" height="44.5"/><rect class="cls-8" x="620" y="-23.61" width="77.5" height="44.5"/><rect class="cls-7" x="697.5" y="-23.61" width="77.5" height="44.5"/><rect class="cls-6" x="775" y="-23.61" width="77.5" height="44.5"/><rect class="cls-5" x="852.5" y="-23.61" width="77.5" height="44.5"/><rect class="cls-4" x="930" y="-23.61" width="77.5" height="44.5"/><rect class="cls-3" x="1007.5" y="-23.61" width="77.5" height="44.5"/><rect class="cls-2" x="1085" y="-23.61" width="77.5" height="44.5"/><rect class="cls-1" x="1162.5" y="-23.61" width="77.5" height="44.5"/></svg>
-      {% else %}
-        <img src="/assets/img/topfig.svg" alt="Some stinkin' SVG I use as a banner">
-        <img src="/assets/img/topfig.png" alt="Some stinkin' SVG I use as a banner">
-      {% endif %}
-    </div>
-    
-    <div class="wrapper">
-        {{ content }}
+        <img src="/assets/img/IMG_2951.JPG" alt="Some stinkin' SVG I use as a banner">
     </div>
 
 </body>
 
 </html>
+
+<!--
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  <!--
+</head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        {% endif %}
+
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+        {% if site.github.is_project_page %}
+        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
+        {% endif %}
+
+        {% if site.github.is_user_page %}
+        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+        {% endif %}
+
+        {% if site.show_downloads %}
+        <ul class="downloads">
+          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
+          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+        </ul>
+        {% endif %}
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
+      <footer>
+        {% if site.github.is_project_page %}
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    {% if site.google_analytics %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
+  </body>
+</html>
+-->

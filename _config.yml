@@ -1,6 +1,7 @@
+title: Nan Wu
 theme: jekyll-theme-cayman
 # Blog settings
-permalink: /blog/:title
+permalink: /:title
 
 
 # My variables

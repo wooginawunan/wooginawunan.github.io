@@ -6,10 +6,9 @@ date: 2015-08-21
 
 # tags i made up to format this as a paper
 work-type: Paper
-ref-authors: Nan Wu, Jason Phang, Jungkyu Park, Yiqiu Shen, Zhe Huang, Masha Zorin, Stanisław Jastrzębski, Thibault Févry, Joe Katsnelson, Eric Kim, Stacey Wolfson, Ujas Parikh, Sushma Gaddam, Leng Leng Young Lin, Joshua D. Weinstein, Krystal Airola, Eralda Mema, Stephanie Chung, Esther Hwang, Naziya Samreen, Kara Ho, Beatriu Reig, Yiming Gao, Hildegard Toth, Kristine Pysarenko, Alana Lewin, Jiyon Lee, Laura Heacock, S. Gene Kim, Linda Moy, Kyunghyun Cho, and Krzysztof J. Geras
-ref-info: IEEE Transactions on Medical Imaging. 2019
-ref-title: Deep neural networks improve radiologists' performance in breast cancer screening
-ref-link: https://ieeexplore.ieee.org/document/8861376
-ref-link-code: https://github.com/nyukat/breast_cancer_classifier
+ref-authors: Yiqiu Shen, Nan Wu, Jason Phang, Jungkyu Park, Gene Kim, Linda Moy, Kyunghyun Cho, and Krzysztof J Geras
+ref-info: Machine Learning in Medical Imaging: 10th International Workshop, MLMI 2019, held in Conjunction with MICCAI 2019
+ref-title: Globally-Aware Multiple Instance Classifier for Breast Cancer Screening
+ref-link: https://arxiv.org/pdf/1906.02846
 ---
 

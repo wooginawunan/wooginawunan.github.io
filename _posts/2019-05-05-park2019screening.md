@@ -9,5 +9,5 @@ work-type: Paper
 ref-authors: Park, Jungkyu and Phang, Jason and Shen, Yiqiu and Wu, Nan and Kim, S Gene and Moy, Linda and Cho, Kyunghyun and Geras, Krzysztof J Cho and Krzysztof J. Geras
 ref-info: MIDL 2019
 ref-title: Screening Mammogram Classification with Prior Exams
-ref-link: #TODO
+ref-link: https://openreview.net/forum?id=HkgCdUaMq4
 ---

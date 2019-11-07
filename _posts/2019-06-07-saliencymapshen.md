@@ -2,7 +2,7 @@
 title: saliencymapshen
 layout: post
 category: science
-date: 2015-08-21
+date: 2019-06-07
 
 # tags i made up to format this as a paper
 work-type: Paper
@@ -11,3 +11,4 @@ ref-info: Machine Learning in Medical Imaging: 10th International Workshop, MLMI
 ref-title: Globally-Aware Multiple Instance Classifier for Breast Cancer Screening
 ref-link: https://arxiv.org/pdf/1906.02846
 ---
+

@@ -1,5 +1,5 @@
 ---
-title: salienymapshen
+title: saliencymapshen
 layout: post
 category: science
 date: 2015-08-21

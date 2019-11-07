@@ -46,7 +46,7 @@ Currently, our research centres on both application and theoritical learning pro
           <p> {{ post.ref-title }}. </p>
           <p id="paper-author"> {{ post.ref-authors }}. </p>
           <p id="paper-info"> {{ post.ref-info }}. <a href="{{post.ref-link}}"> pdf </a>. 
-            {% if post.ref-link-code != 'undefined' %}
+            {% if post.ref-link-code %}
             Code avalible at: <a href="{{post.ref-link-code}}"> {{post.ref-link-code}} </a> 
             {% endif %}
           </p>

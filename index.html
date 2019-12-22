@@ -37,6 +37,10 @@ Currently, our research centres on both application and theoritical learning pro
 <p id="landing-page-text-small"> Check out for more: <a href="/me"> about me </a> </p>
 <p id="landing-page-text"> Welcome to connect via: <a href="https://twitter.com/NanWu__"> Twitter </a> </p>
 
+<p id="landing-page-text"> My new post: <a href="/:categories/:year/:month/:day/:title"> If you want to apply for NYU Data Science PhD program:) </a> </p>
+
+
+
 <div class="blog">
     <h1>Publications:</h1>
   <ul>
@@ -57,6 +61,25 @@ Currently, our research centres on both application and theoritical learning pro
 </div>
 
 <!-- <div class="blog">
+    <h1>Stream:</h1>
+    <ul>
+        {% for post in site.categories.diary %}
+           {% if post.work-type == 'onmainpage' %}
+            <li>
+              <p> {{ post.ref-title }}. </p>
+              <p id="paper-author"> {{ post.ref-authors }}. </p>
+              <p id="paper-info"> {{ post.ref-info }}. <a href="{{post.ref-link}}"> pdf </a>. 
+                {% if post.ref-link-code %}
+                Code avalible at: <a href="{{post.ref-link-code}}"> {{post.ref-link-code}} </a> 
+                {% endif %}
+              </p>
+            </li>
+          {% endif %}
+        {% endfor %}
+    </ul>
+</div> -->
+
+<!-- <div class="blog">
     <h1>Projects:</h1>
     <ul>
         {% for post in site.categories.project %}
@@ -65,15 +88,15 @@ Currently, our research centres on both application and theoritical learning pro
            </li>
         {% endfor %}
     </ul>
-</div>
+</div> -->
 
 <div class="blog">
-    <h1>Notes:</h1>
+    <h1>shares:</h1>
     <ul>
-        {% for post in site.categories.notes %}
+        {% for post in site.categories.shares %}
            <li>
-            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
         {% endfor %}
     </ul>
-</div> -->
+</div>

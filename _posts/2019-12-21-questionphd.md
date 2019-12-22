@@ -10,6 +10,15 @@ I summarized related questions I got from junior fellows along with my feedbacks
 
 1. What made you decide to do a PhD? 
 
+Everyone can have a different set of personal reasons for their decision about PhD.    
+
+I would like to first share some basic conditions which I think you should meet, and they are also common reasons people have for this question:
+
+You love research, maybe not only for your own 'research' project, but also for some other topics or phenomenons you run into in daily life. Sorry for my poor vocabulary, here I consider 'research' as a habit or characteristic, which stands for spontaneously and passinately investigating and summarizing observations or questions but not being satisfied with a general or shallow idea. 
+
+
+
+
 
 2. How does that change your job prospects?
 

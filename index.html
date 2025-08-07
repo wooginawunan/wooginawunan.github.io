@@ -48,6 +48,18 @@ Besides the main research focus, I am also interested in topics under knowledge 
 
 <!-- <p id="landing-page-text"> My new post: <a href="https://wooginawunan.github.io/questionphd"> If you want to apply for NYU Data Science PhD program:) </a> </p> -->
 
+<div class="blog">
+  <h1>Recent Writings:</h1>
+  <ul>
+      {% for post in site.posts limit:5 %}
+      <li>
+          <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - 
+          <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+  </ul>
+  <a href="/blog">View all writings →</a>
+</div>
 
 <!-- <div class="blog">
     <h1>Publications:</h1>

@@ -4,7 +4,12 @@ layout: default
 
 <div class="post">
 	<div class="post__back">
-    	<a href="/">&lt;-- home</a>
+    	<a href="/"> home </a>
+    	{% if page.category %}
+    	&nbsp;|&nbsp;<a href="/blog/{{ page.category }}.html"> {{ page.category }}</a>
+    	{% else %}
+    	&nbsp;|&nbsp;<a href="/blog/"> all posts</a>
+    	{% endif %}
     </div>
     <div class="post__title">
     	<h1>{{ page.title }}</h1>
@@ -17,5 +22,13 @@ layout: default
     </div>
     <div class="post__content"?>
         {{ content }}
+    </div>
+    <div class="post__back">
+    	<a href="/"> home</a>
+    	{% if page.category %}
+    	&nbsp;|&nbsp;<a href="/blog/{{ page.category }}.html"> {{ page.category }}</a>
+    	{% else %}
+    	&nbsp;|&nbsp;<a href="/blog/"> all posts</a>
+    	{% endif %}
     </div>
 </div>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <title>Company Tracker Dashboard</title>
+    <meta name="description" content="A visual log exploring 2017 target companies—where they went and how my preferences evolved.">
+    <meta property="og:title" content="Company Tracker Dashboard">
+    <meta property="og:description" content="A visual log exploring 2017 target companies—where they went and how my preferences evolved.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wooginawunan.github.io/apps/companytracker.html">
+    <meta property="og:image" content="https://wooginawunan.github.io/assets/img/profile_p.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Startup Trajectories &amp; Personal Tastes: A Log of My 2017 Job Hunt">
+    <meta name="twitter:description" content="A visual log exploring 2017 target companies—where they went and how my preferences evolved.">
+    <meta name="twitter:image" content="https://wooginawunan.github.io/assets/img/profile_p.jpg">
+    
+    <link rel="icon" href="https://wooginawunan.github.io/favion.JPG">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    
+    <!-- Company Tracker Dashboard -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Homepage color scheme and typography */
+        .company-tracker-dashboard {
+            font-family: "Futura", sans-serif !important;
+            color: #272727 !important;
+            background-color: #FFFFFF !important;
+        }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        
+        /* Override Tailwind colors with homepage theme */
+        .text-gray-900, .text-gray-800 {
+            color: #272727 !important;
+        }
+        .text-gray-700, .text-gray-600 {
+            color: #757575 !important;
+        }
+        .text-gray-500 {
+            color: #757575 !important;
+        }
+        
+        /* Stat cards with homepage style */
+        .stat-card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Filter buttons with homepage link colors */
+        .filter-btn {
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #b39ddb;
+            color: #272727;
+            background-color: #ffffff;
+            font-family: "Futura", sans-serif;
+        }
+        .filter-btn.active {
+            background-color: #b39ddb;
+            color: #ffffff;
+            border-color: #b39ddb;
+        }
+        .filter-btn:not(.active):hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Company cards with homepage style */
+        .company-card {
+            border: 1px solid #ddd;
+            transition: box-shadow 0.3s;
+            background-color: #ffffff;
+        }
+        .company-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Section backgrounds */
+        .bg-white {
+            background-color: #ffffff !important;
+        }
+        
+        /* Input styling */
+        input[type="text"] {
+            font-family: "Futura", sans-serif;
+            border-color: #ddd !important;
+        }
+        input[type="text"]:focus {
+            border-color: #b39ddb !important;
+            box-shadow: 0 0 0 2px rgba(179, 157, 219, 0.2) !important;
+        }
+        
+        /* Status badges with distinct colors */
+        .text-green-800 { color: #64b49d !important; }
+        .bg-green-100 { background-color: #dcfce7 !important; }
+        .text-blue-800 { color: #1d2338 !important; }
+        .bg-blue-100 { background-color: #adc8ea !important; }
+        .text-purple-800 { color: #77553c !important; }
+        .bg-purple-100 { background-color: #f5e4ce !important; }
+        
+        /* Headers */
+        h1, h2, h3 {
+            font-family: "Futura", sans-serif !important;
+            color: #272727 !important;
+        }
+        
+        /* Stat counts with homepage accent */
+        .text-3xl.font-bold {
+            color: #b39ddb !important;
+        }
+    </style>
+</head>
+
+<body class="company-tracker-page">
+    <div class="banner-top">
+        <img src="http://wooginawunan.github.io/assets/img/profile_p.jpg" alt="Profile banner">
+    </div>
+    <div class="text-center mb-8 mt-8"></div>
+    <div class="wrapper">
+        <div class="company-tracker-dashboard">
+            <main>
+                <section id="companies" class="p-6 bg-white rounded-xl shadow-sm">
+
+                    <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+                        <h2 class="text-2xl font-semibold text-gray-800">Company Tracker</h2>
+                        <div id="filter-controls" class="flex items-center justify-center gap-2 flex-wrap">
+                            <button class="filter-btn active px-4 py-2 rounded-lg" data-filter="all">All</button>
+                            <button class="filter-btn px-4 py-2 rounded-lg" data-filter="public">Public</button>
+                            <button class="filter-btn px-4 py-2 rounded-lg" data-filter="private">Private</button>
+                            <button class="filter-btn px-4 py-2 rounded-lg" data-filter="acquired">Acquired</button>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full table-auto">
+                            <thead>
+                                <tr class="text-left">
+                                    <th class="px-4 py-2 font-bold w-1/6" style="color: #966ce5;">Name</th>
+                                    <th class="px-4 py-2 font-bold w-1/4" style="color: #966ce5;">Status @ 2025 Aug </th>
+                                    <th class="px-4 py-2 font-bold w-8/12" style="color: #966ce5;">Key Events</th>
+                                </tr>
+                            </thead>
+                            <tbody id="company-table-body"></tbody>
+                        </table>
+                        <p id="no-results" class="text-center text-gray-500 py-12 hidden">No companies match your criteria.</p>
+                    </div>
+                                </section>
+            </main>
+            <div class="border-t border-gray-200 my-8"></div>
+
+            <footer class="text-left mt-8">
+                <p class="text-base text-gray-600 italic">
+                    This project was prompted while decluttering my old Apple Notes. I found a 2017 list of companies I had planned to apply to for internships or full-time roles during my Master's in Data Science at NYU. Curious, 
+                    I decided to check how those companies are doing now.
+                    <br>
+                    <br>
+                    With the below two questions in mind:
+                    <br>
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8 text-gray-700">
+                    <div>
+                        <p class="text-base text-gray-700 font-semibold">Market patterns</p>
+                        <p class="text-sm text-gray-600">what trajectories do startups and growing companies typically follow?</p>
+                    </div>
+                    <div>
+                        <p class="text-base text-gray-700 font-semibold">Personal evolution</p>
+                        <p class="text-sm text-gray-600">how have my preferences and career priorities shifted, and what might have happened if I'd joined some of these companies?</p>
+                    </div>
+                </div>
+
+
+                <div class="foot-wrap text-center">
+                    <div style="opacity:.9; margin-top:10px">© 2025 Nan Wu. All rights reserved.</div>
+                </div>
+            </footer>
+        </div>
+
+        <script>
+            (() => {
+                'use strict';
+
+                // DOM references
+                const els = {
+                    filterControls: document.getElementById('filter-controls'),
+                    tableBody: document.getElementById('company-table-body'),
+                    noResults: document.getElementById('no-results'),
+                };
+
+                // Category helpers
+                const CATEGORY = Object.freeze({ PUBLIC: 'public', PRIVATE: 'private', ACQUIRED: 'acquired' });
+                const CATEGORY_LABEL = Object.freeze({
+                    [CATEGORY.PUBLIC]: 'Public',
+                    [CATEGORY.PRIVATE]: 'Private',
+                    [CATEGORY.ACQUIRED]: 'Acquired/Integrated',
+                });
+                const PUBLIC_HINTS = ['public','(nyse:','(nasdaq:','(adbe)','(yelp)','(grpn)','(uber)','(plus)','(meta)','(abnb)','(pltr)','(aapl)','(googl)','(axp)','(z, zg)'];
+                const PRIVATE_HINTS = ['private','recruiter','independent','national lab'];
+
+                let currentFilter = 'all';
+                let dataAll = [];
+
+                const normalize = (s) => (s || '').toString().trim().toLowerCase();
+                const getStatusCategory = (statusText) => {
+                    const t = normalize(statusText);
+                    if (PUBLIC_HINTS.some(h => t.includes(h))) return CATEGORY.PUBLIC;
+                    if (PRIVATE_HINTS.some(h => t.includes(h))) return CATEGORY.PRIVATE;
+                    return CATEGORY.ACQUIRED;
+                };
+
+                const badgeClasses = (category) => {
+                    switch (category) {
+                        case CATEGORY.PUBLIC: return { text: 'text-green-800', bg: 'bg-green-100' };
+                        case CATEGORY.PRIVATE: return { text: 'text-blue-800', bg: 'bg-blue-100' };
+                        case CATEGORY.ACQUIRED: return { text: 'text-purple-800', bg: 'bg-purple-100' };
+                        default: return { text: '', bg: '' };
+                    }
+                };
+
+                const renderTable = (rows) => {
+                    els.tableBody.innerHTML = '';
+                    els.noResults.classList.toggle('hidden', rows.length > 0);
+                    const frag = document.createDocumentFragment();
+                    rows.forEach((c) => {
+                        const tr = document.createElement('tr');
+                        tr.className = 'border-t border-gray-200';
+                        const { text, bg } = badgeClasses(c.category);
+                        tr.innerHTML = `
+                            <td class="px-4 py-3 text-gray-800 w-1/6 align-bottom">
+                                <div class="flex flex-col">
+                                    <span class="font-medium">${c.company}</span>
+                                    <span class="text-xs font-semibold px-2 py-1 rounded-full ${text} ${bg} mt-1 inline-block w-fit">${CATEGORY_LABEL[c.category]}</span>
+                                </div>
+                            </td>
+                            <td class="px-4 py-3 text-gray-600 w-1/4 align-bottom">${c.status}</td>
+                            <td class="px-4 py-3 text-gray-600 w-8/12 align-bottom">${c.trajectory}</td>
+                        `;
+                        frag.appendChild(tr);
+                    });
+                    els.tableBody.appendChild(frag);
+                };
+
+                const applyFilter = () => {
+                    let data = dataAll;
+                    if (currentFilter !== 'all') {
+                        data = data.filter(d => d.category === currentFilter);
+                    }
+                    renderTable(data);
+                };
+
+                const onFilterClick = (e) => {
+                    const btn = e.target.closest('button[data-filter]');
+                    if (!btn) return;
+                    currentFilter = btn.dataset.filter;
+                    document.querySelectorAll('.filter-btn').forEach(b => {
+                        b.classList.toggle('active', b === btn);
+                        b.setAttribute('aria-pressed', String(b === btn));
+                    });
+                    applyFilter();
+                };
+
+                const init = async () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => {
+                        b.setAttribute('aria-pressed', String(b.classList.contains('active')));
+                    });
+
+                    try {
+                        const res = await fetch('/assets/data/companies.json');
+                        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                        const raw = await res.json();
+                        dataAll = raw.map(c => ({ ...c, category: c.category || getStatusCategory(c.status || '') }));
+                        renderTable(dataAll);
+                        els.filterControls.addEventListener('click', onFilterClick);
+                    } catch (err) {
+                        console.error('Error fetching company data:', err);
+                        els.tableBody.innerHTML = '<tr><td colspan="4" class="px-4 py-6 text-center text-red-500">Failed to load company data.</td></tr>';
+                    }
+                };
+
+                document.addEventListener('DOMContentLoaded', init);
+            })();
+        </script>
+    </div>
+</body>
+</html>

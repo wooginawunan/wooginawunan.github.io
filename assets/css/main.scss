@@ -310,6 +310,24 @@ body.bilingual-page .wrapper {
 	}
 }
 
+// Make entire page wider for company tracker dashboard
+.wrapper:has(.company-tracker-dashboard) {
+	max-width: 1400px;
+	
+	@media screen and (max-width: 1440px) {
+		max-width: 95%;
+	}
+}
+
+// Fallback for browsers that don't support :has() - detect via body class
+body.company-tracker-page .wrapper {
+	max-width: 1400px;
+	
+	@media screen and (max-width: 1440px) {
+		max-width: 95%;
+	}
+}
+
 // Bilingual post layout
 .bilingual-post {
 	display: flex;

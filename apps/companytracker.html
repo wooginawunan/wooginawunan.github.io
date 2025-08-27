@@ -129,6 +129,17 @@
         .text-3xl.font-bold {
             color: #b39ddb !important;
         }
+        
+        /* Ensure full width for company tracker */
+        body.company-tracker-page .wrapper {
+            max-width: 1400px !important;
+        }
+        
+        @media screen and (max-width: 1440px) {
+            body.company-tracker-page .wrapper {
+                max-width: 95% !important;
+            }
+        }
     </style>
 </head>
 

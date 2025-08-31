@@ -1,0 +1,22 @@
+name: New company request
+description: Submit text or a URL to add companies
+title: "New company request"
+labels:
+  - company-request
+body:
+  - type: textarea
+    id: content
+    attributes:
+      label: Pasted text or URL
+      description: Paste text or a URL that contains one or more companies.
+      placeholder: e.g. https://example.com/companies or "Company A, Company B"
+    validations:
+      required: true
+  - type: textarea
+    id: detected
+    attributes:
+      label: Detected candidates (optional)
+      description: Optional list of detected names (auto-filled from the page UI).
+    validations:
+      required: false
+

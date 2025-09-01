@@ -50,9 +50,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ADDED=${{ steps.proc.outputs.added_names }}
-          CHANGED=${{ steps.proc.outputs.changed }}
-          ERROR=${{ steps.proc.outputs.error }}
+          ADDED="${{ steps.proc.outputs.added_names }}"
+          CHANGED="${{ steps.proc.outputs.changed }}"
+          ERROR="${{ steps.proc.outputs.error }}"
           BODY=$'Update result:\n- changed: '"$CHANGED"$'\n- added: '"${ADDED:-none}"$'\n'"${ERROR:+- error: $ERROR\n}"$''
           curl -s -X POST \
             -H "Authorization: Bearer $GH_TOKEN" \

@@ -385,21 +385,23 @@
                 const buildIssueURL = (detected, rawInput) => {
                     const owner = 'wooginawunan';
                     const repo = 'wooginawunan.github.io';
-                    const title = encodeURIComponent('New company request');
-                    const bodyLines = [];
-                    bodyLines.push('User submitted companies or URL:');
-                    bodyLines.push('');
-                    bodyLines.push('```');
-                    bodyLines.push((rawInput || '').trim());
-                    bodyLines.push('```');
-                    bodyLines.push('');
-                    if (detected.length) {
-                        bodyLines.push('Detected candidates:');
-                        for (const d of detected) bodyLines.push(`- ${d}`);
+                    
+                    // For YAML templates, we need to use field-specific parameters
+                    const params = new URLSearchParams();
+                    params.append('template', 'new_company.yml');
+                    
+                    // Fill the 'content' field (first textarea in template)
+                    if (rawInput && rawInput.trim()) {
+                        params.append('content', rawInput.trim());
                     }
-                    const body = encodeURIComponent(bodyLines.join('\n'));
-                    // Using the new_company.yml issue template
-                    return `https://github.com/${owner}/${repo}/issues/new?template=new_company.yml&title=${title}&labels=company-request&body=${body}`;
+                    
+                    // Fill the 'detected' field (second textarea in template)
+                    if (detected.length) {
+                        const detectedText = detected.map(d => `- ${d}`).join('\n');
+                        params.append('detected', detectedText);
+                    }
+                    
+                    return `https://github.com/${owner}/${repo}/issues/new?${params.toString()}`;
                 };
 
                 const onSubmit = () => {

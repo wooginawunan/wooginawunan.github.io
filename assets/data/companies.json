@@ -316,5 +316,17 @@
         "status": "Active, operating as a leading AI interpretability research company focused on understanding and designing advanced AI systems.",
         "trajectory": "Experiencing rapid growth, having raised a $7 million seed round in August 2024 and a $50 million Series A round in April 2025 at a $200 million valuation to further develop its Ember platform and research initiatives.",
         "category": "private"
+    },
+    {
+        "company": "Databricks",
+        "status": "Actively operating and expanding globally.",
+        "trajectory": "Recently secured a Series K funding round, pushing its valuation to over $100 billion, with plans for further AI product development and acquisitions.",
+        "category": "private"
+    },
+    {
+        "company": "Formation Bio",
+        "status": "Actively operating and developing drugs using an AI-powered platform.",
+        "trajectory": "Closed a $372 million Series D funding round in June 2024, with a valuation described as a \"material step up\" from its $1 billion valuation in September 2021.",
+        "category": "private"
     }
 ]

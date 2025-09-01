@@ -310,5 +310,11 @@
         "status": "Elad Gil is a prominent entrepreneur, active investor, and advisor in the technology and startup sectors. He co-founded Color Health and Mixer Labs (acquired by Twitter), and manages Gil Capital, a significant venture fund.",
         "trajectory": "His career trajectory includes leadership roles at Google (starting the mobile team) and Twitter (VP of Corporate Strategy), evolving into a highly influential solo venture capitalist who has made early investments in over 30 unicorn startups.",
         "category": "private"
+    },
+    {
+        "company": "Goodfire",
+        "status": "Active, operating as a leading AI interpretability research company focused on understanding and designing advanced AI systems.",
+        "trajectory": "Experiencing rapid growth, having raised a $7 million seed round in August 2024 and a $50 million Series A round in April 2025 at a $200 million valuation to further develop its Ember platform and research initiatives.",
+        "category": "private"
     }
 ]

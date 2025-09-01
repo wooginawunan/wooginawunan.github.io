@@ -190,7 +190,7 @@
                         <textarea id="suggest-input" class="w-full border rounded-md p-3 text-sm" rows="4" placeholder="Paste companies or a link..."></textarea>
 
                         <div class="flex items-center gap-2 flex-wrap">
-                            <button id="submit-btn" class="filter-btn px-4 py-2 rounded-lg">Submit to GitHub</button>
+                            <button id="submit-btn" class="filter-btn px-4 py-2 rounded-lg">Submit</button>
                             <span id="analyze-hint" class="text-xs text-gray-600"></span>
                         </div>
 
@@ -205,7 +205,7 @@
             <div class="border-t border-gray-200 my-8"></div>
 
             <footer class="text-left mt-8">
-                <p class="text-base text-gray-600 italic">
+                <p class="text-base text-gray-600 italic" style="display: none;">
                     This project was prompted while decluttering my old Apple Notes. I found a 2017 list of companies I had planned to apply to for internships or full-time roles during my Master's in Data Science at NYU. Curious, 
                     I decided to check how those companies are doing now.
                     <br>
@@ -214,7 +214,7 @@
                     <br>
                 </p>
                 
-                <div class="mb-8 text-gray-700">
+                <div class="mb-8 text-gray-700"  style="display: none;">
                     <p class="text-base text-gray-700 font-semibold">Market patterns</p>
                     <p class="text-sm text-gray-600 mb-4">what trajectories do startups and growing companies typically follow?</p>
                     
@@ -324,8 +324,6 @@
                 const detectCompanies = (text) => {
                     const input = (text || '').trim();
                     if (!input) return [];
-                    // If it looks like a URL, just pass it through as one item
-                    if (/^https?:\/\//i.test(input)) return [input];
 
                     // Split by newline or commas/semicolon/pipes
                     const parts = input
@@ -344,7 +342,13 @@
                     // Heuristic: keep tokens with at least one capital letter or known brand-like chars
                     const candidates = new Set();
                     for (const c of clean) {
-                        if (/^https?:\/\//i.test(c)) { candidates.add(c); continue; }
+                        // Keep URLs as-is for backend processing
+                        if (/^https?:\/\//i.test(c)) { 
+                            candidates.add(c); 
+                            continue; 
+                        }
+                        
+                        // Keep company names with capital letters or multi-word patterns
                         if (/[A-Z]/.test(c) || /[A-Za-z]+\s+[A-Za-z]+/.test(c)) {
                             // Avoid super-common words
                             const l = c.toLowerCase();

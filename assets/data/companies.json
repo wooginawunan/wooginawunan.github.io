@@ -1,48 +1,284 @@
 [
-    { "company": "Precyse", "trajectory": "Became part of MedAssets-Precyse → rebranded nThrive (2016) → FinThrive (2022).", "status": "Operating as FinThrive (private).", "category": "private" },
-    { "company": "Pinterest", "trajectory": "Steady growth; bigger AI/commerce push; hit record users in 2025.", "status": "Public (NYSE: PINS); 578M MAUs, +17% rev in Q2'25.", "category": "public" },
-    { "company": "A9 (Amazon)", "trajectory": "A9 brand retired; folded into Amazon Search; a9.com taken down in 2019.", "status": "Functions as Amazon Search inside Amazon.", "category": "acquired" },
-    { "company": "TripAdvisor", "trajectory": "Pandemic trough → recovery; exploring separation of Viator/TheFork in 2025.", "status": "Public; owns Viator & TheFork, evaluating separation.", "category": "public" },
-    { "company": "GrassBridge LLC", "trajectory": "Boutique tech recruiting firm (not a product company).", "status": "Active recruiter.", "category": "private" },
-    { "company": "Reflektion", "trajectory": "Acquired by Sitecore in 2021.", "status": "Part of Sitecore's personalization stack.", "category": "acquired" },
-    { "company": "Adobe", "trajectory": "Killed the $20B Figma deal (Dec 2023); leaned harder into Firefly/AI.", "status": "Public (ADBE); generative-AI a core focus.", "category": "public" },
-    { "company": "Medallia", "trajectory": "Taken private by Thoma Bravo (2021).", "status": "Private under Thoma Bravo.", "category": "private" },
-    { "company": "Skyhigh Networks", "trajectory": "Acquired by McAfee (2018); relaunched as Skyhigh Security under STG (2022).", "status": "Skyhigh Security operating privately.", "category": "private" },
-    { "company": "Yelp", "trajectory": "Continued steady, review-driven ad business through 2025.", "status": "Public (YELP).", "category": "public" },
-    { "company": "Groupon", "trajectory": "Deep restructuring; 'comeback' narrative in 2024–25.", "status": "Public (GRPN).", "category": "public" },
-    { "company": "Zensight", "trajectory": "Acquired by Seismic (2018).", "status": "Integrated into Seismic.", "category": "acquired" },
-    { "company": "Indeed", "trajectory": "Major layoffs in 2023 & 2024; in 2025 Recruit starts integrating Indeed & Glassdoor.", "status": "Part of Recruit's HR Tech unit; deeper Glassdoor tie-up.", "category": "acquired" },
-    { "company": "Fitbit", "trajectory": "Acquisition by Google closed Jan 2021.", "status": "Google's wearables brand.", "category": "acquired" },
-    { "company": "Uber", "trajectory": "IPO 2019; reached sustained GAAP profitability by 2024.", "status": "Public (UBER), profitable platform.", "category": "public" },
-    { "company": "Quantcast", "trajectory": "Stayed private; multiple restructurings/layoffs in 2023–24.", "status": "Private ad-tech firm.", "category": "private" },
-    { "company": "ePlus", "trajectory": "Kept compounding as an IT solutions VAR; strong FY25 prints.", "status": "Public (PLUS).", "category": "public" },
-    { "company": "eHarmony", "trajectory": "Acquired by Germany's Parship/Elite Group (2018).", "status": "Part of ParshipMeet Group.", "category": "acquired" },
-    { "company": "Lynx (Analytics)", "trajectory": "Continued as a telco-focused analytics company.", "status": "Private; active in APAC.", "category": "private" },
-    { "company": "Adap.tv", "trajectory": "Already part of AOL (pre-2017); AOL/Yahoo sold to Apollo in 2021.", "status": "Within Yahoo's ad-tech history; brand long sunset.", "category": "acquired" },
-    { "company": "OnDeck", "trajectory": "Acquired by Enova (2020).", "status": "Brand within Enova.", "category": "acquired" },
-    { "company": "Facebook", "trajectory": "Rebranded to Meta (2021).", "status": "Public (META).", "category": "public" },
-    { "company": "IBM (Watson team)", "trajectory": "Sold Watson Health → Merative (2022); launched watsonx (2023).", "status": "IBM focuses Watsonx + enterprise AI.", "category": "acquired" },
-    { "company": "Quora", "trajectory": "Launched AI platform Poe (public in 2023; API 2025).", "status": "Private; running Quora + Poe.", "category": "private" },
-    { "company": "Airbnb", "trajectory": "IPO in 2020; profitable at scale by 2023–24.", "status": "Public (ABNB).", "category": "public" },
-    { "company": "Twitter → X", "trajectory": "Acquired by Elon Musk (Oct 2022); rebranded to X; HQ moved to TX (2024).", "status": "Private under X Corp.", "category": "private" },
-    { "company": "Coursera", "trajectory": "IPO in 2021 (NYSE: COUR).", "status": "Public ed-tech platform.", "category": "public" },
-    { "company": "Glassdoor", "trajectory": "Acquired by Recruit (2018); 2025 integration moves with Indeed.", "status": "Under Recruit's HR Tech; tighter Indeed pairing.", "category": "acquired" },
-    { "company": "Bloomreach", "trajectory": "Acquired Exponea (2021) + $150M raise.", "status": "Private commerce-experience platform.", "category": "private" },
-    { "company": "Zillow", "trajectory": "Wound down iBuying (2021) then refocused; Q2'25 beat.", "status": "Public (Z, ZG); profitable adj. EBITDA in Q2'25.", "category": "public" },
-    { "company": "Meetup", "trajectory": "Bought by WeWork (2017), sold to AlleyCorp-led group (2020).", "status": "Private, independent of WeWork.", "category": "private" },
-    { "company": "DataRobot", "trajectory": "Leadership turmoil 2022; pivoted to gen-AI suite in 2024.", "status": "Private, enterprise-AI apps/agents.", "category": "private" },
-    { "company": "AOL", "trajectory": "Verizon sold Yahoo/AOL to Apollo; now inside Yahoo (2021).", "status": "Legacy brand under Yahoo/Apollo.", "category": "acquired" },
-    { "company": "Wealthfront", "trajectory": "UBS–Wealthfront acquisition terminated (Sept 2022); stayed independent.", "status": "Private robo-advisor.", "category": "private" },
-    { "company": "Palantir", "trajectory": "Direct-listed on NYSE in 2020; scaled gov/commercial AI.", "status": "Public (PLTR).", "category": "public" },
-    { "company": "Heap", "trajectory": "Acquired by Contentsquare (deal closed Dec 2023).", "status": "Part of Contentsquare.", "category": "acquired" },
-    { "company": "Apple (Siri teams)", "trajectory": "Announced 'Apple Intelligence' (WWDC 2024) with a big Siri upgrade; expanded 2025.", "status": "Public (AAPL); rolling out Apple Intelligence.", "category": "public" },
-    { "company": "Kosei", "trajectory": "Pinterest acquired Kosei (2015) for ML recommendations.", "status": "Tech long integrated at Pinterest.", "category": "acquired" },
-    { "company": "Rocket Fuel", "trajectory": "Bought by Sizmek (2017); Amazon acquired Sizmek's ad server/DCO in 2019.", "status": "Rocket Fuel brand gone; pieces live inside Amazon Advertising & others.", "category": "acquired" },
-    { "company": "Google", "trajectory": "Continued as Alphabet; search/ads + cloud + devices expansion.", "status": "Public (GOOGL).", "category": "public" },
-    { "company": "Aetna", "trajectory": "CVS Health completed acquisition (Nov 2018).", "status": "CVS subsidiary.", "category": "acquired" },
-    { "company": "Trulia", "trajectory": "Acquired by Zillow (2015); brand kept within Zillow Group.", "status": "Part of Zillow Group.", "category": "acquired" },
-    { "company": "Apple (Maps eval)", "trajectory": "Same Apple trajectory as above.", "status": "Public (AAPL).", "category": "public" },
-    { "company": "American Express", "trajectory": "Steady financials, brand strength through 2025.", "status": "Public (AXP).", "category": "public" },
-    { "company": "Travelport", "trajectory": "Taken private by Siris/Evergreen (deal closed 2019).", "status": "Private travel-tech GDS.", "category": "private" },
-    { "company": "Sandia (Nat'l Labs)", "trajectory": "Ongoing DOE/NNSA mission; run by NTESS (Honeywell subsidiary).", "status": "Active U.S. national lab.", "category": "private" }
+    {
+        "company": "Precyse",
+        "trajectory": "Became part of MedAssets-Precyse → rebranded nThrive (2016) → FinThrive (2022).",
+        "status": "Operating as FinThrive (private).",
+        "category": "private"
+    },
+    {
+        "company": "Pinterest",
+        "trajectory": "Steady growth; bigger AI/commerce push; hit record users in 2025.",
+        "status": "Public (NYSE: PINS); 578M MAUs, +17% rev in Q2'25.",
+        "category": "public"
+    },
+    {
+        "company": "A9 (Amazon)",
+        "trajectory": "A9 brand retired; folded into Amazon Search; a9.com taken down in 2019.",
+        "status": "Functions as Amazon Search inside Amazon.",
+        "category": "acquired"
+    },
+    {
+        "company": "TripAdvisor",
+        "trajectory": "Pandemic trough → recovery; exploring separation of Viator/TheFork in 2025.",
+        "status": "Public; owns Viator & TheFork, evaluating separation.",
+        "category": "public"
+    },
+    {
+        "company": "GrassBridge LLC",
+        "trajectory": "Boutique tech recruiting firm (not a product company).",
+        "status": "Active recruiter.",
+        "category": "private"
+    },
+    {
+        "company": "Reflektion",
+        "trajectory": "Acquired by Sitecore in 2021.",
+        "status": "Part of Sitecore's personalization stack.",
+        "category": "acquired"
+    },
+    {
+        "company": "Adobe",
+        "trajectory": "Killed the $20B Figma deal (Dec 2023); leaned harder into Firefly/AI.",
+        "status": "Public (ADBE); generative-AI a core focus.",
+        "category": "public"
+    },
+    {
+        "company": "Medallia",
+        "trajectory": "Taken private by Thoma Bravo (2021).",
+        "status": "Private under Thoma Bravo.",
+        "category": "private"
+    },
+    {
+        "company": "Skyhigh Networks",
+        "trajectory": "Acquired by McAfee (2018); relaunched as Skyhigh Security under STG (2022).",
+        "status": "Skyhigh Security operating privately.",
+        "category": "private"
+    },
+    {
+        "company": "Yelp",
+        "trajectory": "Continued steady, review-driven ad business through 2025.",
+        "status": "Public (YELP).",
+        "category": "public"
+    },
+    {
+        "company": "Groupon",
+        "trajectory": "Deep restructuring; 'comeback' narrative in 2024–25.",
+        "status": "Public (GRPN).",
+        "category": "public"
+    },
+    {
+        "company": "Zensight",
+        "trajectory": "Acquired by Seismic (2018).",
+        "status": "Integrated into Seismic.",
+        "category": "acquired"
+    },
+    {
+        "company": "Indeed",
+        "trajectory": "Major layoffs in 2023 & 2024; in 2025 Recruit starts integrating Indeed & Glassdoor.",
+        "status": "Part of Recruit's HR Tech unit; deeper Glassdoor tie-up.",
+        "category": "acquired"
+    },
+    {
+        "company": "Fitbit",
+        "trajectory": "Acquisition by Google closed Jan 2021.",
+        "status": "Google's wearables brand.",
+        "category": "acquired"
+    },
+    {
+        "company": "Uber",
+        "trajectory": "IPO 2019; reached sustained GAAP profitability by 2024.",
+        "status": "Public (UBER), profitable platform.",
+        "category": "public"
+    },
+    {
+        "company": "Quantcast",
+        "trajectory": "Stayed private; multiple restructurings/layoffs in 2023–24.",
+        "status": "Private ad-tech firm.",
+        "category": "private"
+    },
+    {
+        "company": "ePlus",
+        "trajectory": "Kept compounding as an IT solutions VAR; strong FY25 prints.",
+        "status": "Public (PLUS).",
+        "category": "public"
+    },
+    {
+        "company": "eHarmony",
+        "trajectory": "Acquired by Germany's Parship/Elite Group (2018).",
+        "status": "Part of ParshipMeet Group.",
+        "category": "acquired"
+    },
+    {
+        "company": "Lynx (Analytics)",
+        "trajectory": "Continued as a telco-focused analytics company.",
+        "status": "Private; active in APAC.",
+        "category": "private"
+    },
+    {
+        "company": "Adap.tv",
+        "trajectory": "Already part of AOL (pre-2017); AOL/Yahoo sold to Apollo in 2021.",
+        "status": "Within Yahoo's ad-tech history; brand long sunset.",
+        "category": "acquired"
+    },
+    {
+        "company": "OnDeck",
+        "trajectory": "Acquired by Enova (2020).",
+        "status": "Brand within Enova.",
+        "category": "acquired"
+    },
+    {
+        "company": "Facebook",
+        "trajectory": "Rebranded to Meta (2021).",
+        "status": "Public (META).",
+        "category": "public"
+    },
+    {
+        "company": "IBM (Watson team)",
+        "trajectory": "Sold Watson Health → Merative (2022); launched watsonx (2023).",
+        "status": "IBM focuses Watsonx + enterprise AI.",
+        "category": "acquired"
+    },
+    {
+        "company": "Quora",
+        "trajectory": "Launched AI platform Poe (public in 2023; API 2025).",
+        "status": "Private; running Quora + Poe.",
+        "category": "private"
+    },
+    {
+        "company": "Airbnb",
+        "trajectory": "IPO in 2020; profitable at scale by 2023–24.",
+        "status": "Public (ABNB).",
+        "category": "public"
+    },
+    {
+        "company": "Twitter → X",
+        "trajectory": "Acquired by Elon Musk (Oct 2022); rebranded to X; HQ moved to TX (2024).",
+        "status": "Private under X Corp.",
+        "category": "private"
+    },
+    {
+        "company": "Coursera",
+        "trajectory": "IPO in 2021 (NYSE: COUR).",
+        "status": "Public ed-tech platform.",
+        "category": "public"
+    },
+    {
+        "company": "Glassdoor",
+        "trajectory": "Acquired by Recruit (2018); 2025 integration moves with Indeed.",
+        "status": "Under Recruit's HR Tech; tighter Indeed pairing.",
+        "category": "acquired"
+    },
+    {
+        "company": "Bloomreach",
+        "trajectory": "Acquired Exponea (2021) + $150M raise.",
+        "status": "Private commerce-experience platform.",
+        "category": "private"
+    },
+    {
+        "company": "Zillow",
+        "trajectory": "Wound down iBuying (2021) then refocused; Q2'25 beat.",
+        "status": "Public (Z, ZG); profitable adj. EBITDA in Q2'25.",
+        "category": "public"
+    },
+    {
+        "company": "Meetup",
+        "trajectory": "Bought by WeWork (2017), sold to AlleyCorp-led group (2020).",
+        "status": "Private, independent of WeWork.",
+        "category": "private"
+    },
+    {
+        "company": "DataRobot",
+        "trajectory": "Leadership turmoil 2022; pivoted to gen-AI suite in 2024.",
+        "status": "Private, enterprise-AI apps/agents.",
+        "category": "private"
+    },
+    {
+        "company": "AOL",
+        "trajectory": "Verizon sold Yahoo/AOL to Apollo; now inside Yahoo (2021).",
+        "status": "Legacy brand under Yahoo/Apollo.",
+        "category": "acquired"
+    },
+    {
+        "company": "Wealthfront",
+        "trajectory": "UBS–Wealthfront acquisition terminated (Sept 2022); stayed independent.",
+        "status": "Private robo-advisor.",
+        "category": "private"
+    },
+    {
+        "company": "Palantir",
+        "trajectory": "Direct-listed on NYSE in 2020; scaled gov/commercial AI.",
+        "status": "Public (PLTR).",
+        "category": "public"
+    },
+    {
+        "company": "Heap",
+        "trajectory": "Acquired by Contentsquare (deal closed Dec 2023).",
+        "status": "Part of Contentsquare.",
+        "category": "acquired"
+    },
+    {
+        "company": "Apple (Siri teams)",
+        "trajectory": "Announced 'Apple Intelligence' (WWDC 2024) with a big Siri upgrade; expanded 2025.",
+        "status": "Public (AAPL); rolling out Apple Intelligence.",
+        "category": "public"
+    },
+    {
+        "company": "Kosei",
+        "trajectory": "Pinterest acquired Kosei (2015) for ML recommendations.",
+        "status": "Tech long integrated at Pinterest.",
+        "category": "acquired"
+    },
+    {
+        "company": "Rocket Fuel",
+        "trajectory": "Bought by Sizmek (2017); Amazon acquired Sizmek's ad server/DCO in 2019.",
+        "status": "Rocket Fuel brand gone; pieces live inside Amazon Advertising & others.",
+        "category": "acquired"
+    },
+    {
+        "company": "Google",
+        "trajectory": "Continued as Alphabet; search/ads + cloud + devices expansion.",
+        "status": "Public (GOOGL).",
+        "category": "public"
+    },
+    {
+        "company": "Aetna",
+        "trajectory": "CVS Health completed acquisition (Nov 2018).",
+        "status": "CVS subsidiary.",
+        "category": "acquired"
+    },
+    {
+        "company": "Trulia",
+        "trajectory": "Acquired by Zillow (2015); brand kept within Zillow Group.",
+        "status": "Part of Zillow Group.",
+        "category": "acquired"
+    },
+    {
+        "company": "Apple (Maps eval)",
+        "trajectory": "Same Apple trajectory as above.",
+        "status": "Public (AAPL).",
+        "category": "public"
+    },
+    {
+        "company": "American Express",
+        "trajectory": "Steady financials, brand strength through 2025.",
+        "status": "Public (AXP).",
+        "category": "public"
+    },
+    {
+        "company": "Travelport",
+        "trajectory": "Taken private by Siris/Evergreen (deal closed 2019).",
+        "status": "Private travel-tech GDS.",
+        "category": "private"
+    },
+    {
+        "company": "Sandia (Nat'l Labs)",
+        "trajectory": "Ongoing DOE/NNSA mission; run by NTESS (Honeywell subsidiary).",
+        "status": "Active U.S. national lab.",
+        "category": "private"
+    },
+    {
+        "company": "Higgsfield AI",
+        "status": "Active, recently secured $15 million in seed funding.",
+        "trajectory": "Growing, focused on democratizing social media video creation with its AI-powered platform, Diffuse, and expanding its market reach.",
+        "category": "private"
+    }
 ]

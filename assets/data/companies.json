@@ -328,5 +328,47 @@
         "status": "Actively operating and developing drugs using an AI-powered platform.",
         "trajectory": "Closed a $372 million Series D funding round in June 2024, with a valuation described as a \"material step up\" from its $1 billion valuation in September 2021.",
         "category": "private"
+    },
+    {
+        "company": "Latent Labs",
+        "status": "Active",
+        "trajectory": "Latent Labs emerged from stealth with $50 million in total funding, including a $40 million Series A round. It aims to leverage generative AI for programmable biology to create novel therapeutic molecules and accelerate drug discovery. The company was founded in 2023 by Dr. Simon Kohl, a former co-lead of Google DeepMind's protein design team.",
+        "category": "private"
+    },
+    {
+        "company": "Meta (Meta Platforms)",
+        "status": "Active and publicly traded",
+        "trajectory": "Meta has an aggressive mergers and acquisitions strategy, including Instagram ($1 billion in 2012), WhatsApp ($19 billion in 2014), and Oculus VR ($2.3 billion in 2014). The company continues to invest heavily in AI, virtual reality, and its metaverse vision, with strong revenue growth and profitability.",
+        "category": "public"
+    },
+    {
+        "company": "RunwayML",
+        "status": "Active",
+        "trajectory": "Runway has raised a total of $544 million over 6 rounds, with its latest Series D round on April 3, 2025, for $308 million. The company was valued at $1.5 billion in June 2023, and by June 2024, it was reportedly in talks for another round at a $4 billion valuation. In April 2025, it raised $308 million, propelling its valuation to over $3 billion.",
+        "category": "private"
+    },
+    {
+        "company": "Profluent",
+        "status": "Active",
+        "trajectory": "Profluent secured $35 million in additional funding in March 2024, bringing its total raised to $44 million over two rounds (Seed and Series A). This funding supports the advancement of its proprietary Large Language Models (LLMs) and datasets, wet lab capabilities, and CRISPR gene editing.",
+        "category": "private"
+    },
+    {
+        "company": "Future House",
+        "status": "Active",
+        "trajectory": "Future House aims to accelerate scientific discovery, focusing initially on biology, and is primarily funded by Eric Schmidt, with an estimated expenditure of $20 million by the end of 2024. It launched in September 2023. While some sources indicate it has not raised external funding rounds, other sources mention a major funding milestone of $250 million to accelerate its mission, and grants from foundations such as The Eric and Wendy Schmidt Fund for Strategic Innovation and Good Ventures Foundation.",
+        "category": "private"
+    },
+    {
+        "company": "Chai Discovery",
+        "status": "Active",
+        "trajectory": "Chai Discovery announced a $70 million Series A financing round in August 2025, bringing its total funding to $100 million since its founding in 2024. The Series A round valued the company at approximately $550 million, a significant increase from its $150 million seed round valuation in 2024. The company uses AI models to predict and reprogram biochemical interactions to accelerate the development of therapeutics.",
+        "category": "private"
+    },
+    {
+        "company": "EvolutionaryScale",
+        "status": "Active",
+        "trajectory": "EvolutionaryScale emerged from stealth in June 2024 with $142 million in seed funding. The company is developing an AI model called ESM3 to design novel proteins and aims to partner with pharmaceutical companies for drug discovery.",
+        "category": "private"
     }
 ]

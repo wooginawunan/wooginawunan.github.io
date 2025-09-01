@@ -151,7 +151,8 @@ def main():
         body = load_issue_body()
         existing = load_companies(COMPANIES_JSON)
         existing_references = load_references(REFERENCES_JSON)
-        existing_norm = {normalize_name(e.get('company','')) for e in existing}
+        existing_norm = {normalize_name(e.get('company','') \
+            if isinstance(e, dict) else e.company) for e in existing}
 
         llm_items, references = call_llm_to_extract(body)
 

@@ -280,5 +280,17 @@
         "status": "Active, recently secured $15 million in seed funding.",
         "trajectory": "Growing, focused on democratizing social media video creation with its AI-powered platform, Diffuse, and expanding its market reach.",
         "category": "private"
+    },
+    {
+        "company": "Inductive Bio",
+        "status": "Active, venture capital-backed. The company raised $25.1 million in a Series A round in March 2025, bringing its total funding to $29.4 million.",
+        "trajectory": "Inductive Bio is focused on accelerating small molecule drug discovery using AI and machine learning, with a goal to expand its AI model R&D and grow its data consortium.",
+        "category": "private"
+    },
+    {
+        "company": "OpenEvidence",
+        "status": "Active, venture capital-backed. The company recently raised a $210 million Series B round in July 2025, valuing the company at $3.5 billion.",
+        "trajectory": "OpenEvidence is expanding its AI-powered medical search and decision tools, with plans to further strategic content partnerships and scale its clinical research tools. The company achieved $50 million in annualized revenue as of June 2025.",
+        "category": "private"
     }
 ]

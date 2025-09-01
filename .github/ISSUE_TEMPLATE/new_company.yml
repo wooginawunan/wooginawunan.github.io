@@ -1,22 +1,23 @@
-name: New company request
-description: Submit text or a URL to add companies
-title: "New company request"
+# DISABLED: New company request template
+# This template has been temporarily disabled to prevent overusage of LLM processing.
+# Contact the repository owner directly for company submissions.
+
+name: "[DISABLED] New company request"
+description: "⚠️ This template is currently disabled. Contact repository owner for submissions."
+title: "[DISABLED] New company request"
 labels:
-  - company-request
+  - disabled-template
 body:
-  - type: textarea
-    id: content
+  - type: markdown
     attributes:
-      label: Pasted text or URL
-      description: Paste text or a URL that contains one or more companies.
-      placeholder: e.g. https://example.com/companies or "Company A, Company B"
-    validations:
-      required: true
-  - type: textarea
-    id: detected
-    attributes:
-      label: Detected candidates (optional)
-      description: Optional list of detected names (auto-filled from the page UI).
-    validations:
-      required: false
+      value: |
+        ## ⚠️ Template Disabled
+        
+        This issue template has been temporarily disabled to prevent overusage of automated processing.
+        
+        **To submit companies:**
+        - Contact the repository owner directly
+        - Or wait for this feature to be re-enabled
+        
+        Thank you for your understanding!
 

@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   process:
-    if: contains(join(toJson(github.event.issue.labels.*.name)), 'company-request')
+    if: contains(join(toJson(github.event.issue.labels.*.name)), 'company-request') && (github.event.issue.author_association == 'OWNER' || github.event.issue.author_association == 'COLLABORATOR')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo

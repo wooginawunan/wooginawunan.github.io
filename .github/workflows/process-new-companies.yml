@@ -49,6 +49,7 @@ jobs:
           git add assets/data/companies.json
           git add assets/data/references.json
           git commit -m "chore: add companies from #${{ github.event.issue.number }}"
+          git pull --rebase origin master || true
           git push
 
       - name: Comment on issue

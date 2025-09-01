@@ -9,8 +9,8 @@ from pydantic import BaseModel
 
 EVENT_PATH = os.environ.get('GITHUB_EVENT_PATH')
 REPO_PATH = os.environ.get('REPO_PATH', '.')
-COMPANIES_JSON = os.path.join(REPO_PATH, 'wooginawunan.github.io', 'assets', 'data', 'companies.json')
-REFERENCES_JSON = os.path.join(REPO_PATH, 'wooginawunan.github.io', 'assets', 'data', 'references.json')
+COMPANIES_JSON = os.path.join(REPO_PATH, 'assets', 'data', 'companies.json')
+REFERENCES_JSON = os.path.join(REPO_PATH, 'assets', 'data', 'references.json')
 GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY')
 
 def load_issue_body() -> str:

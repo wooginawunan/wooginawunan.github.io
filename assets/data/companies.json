@@ -292,5 +292,17 @@
         "status": "Active, venture capital-backed. The company recently raised a $210 million Series B round in July 2025, valuing the company at $3.5 billion.",
         "trajectory": "OpenEvidence is expanding its AI-powered medical search and decision tools, with plans to further strategic content partnerships and scale its clinical research tools. The company achieved $50 million in annualized revenue as of June 2025.",
         "category": "private"
+    },
+    {
+        "company": "Cohere",
+        "status": "Actively expanding its enterprise AI solutions with recent executive hires and an acquisition, having recently closed a significant funding round.",
+        "trajectory": "Rapidly growing in the enterprise AI market, Cohere raised $500 million in August 2025, increasing its valuation to $6.8 billion, and focuses on secure, customizable AI models for businesses and governments.",
+        "category": "private"
+    },
+    {
+        "company": "OpenAI",
+        "status": "A leading organization in the AI sector, actively developing and deploying advanced AI models such as GPT, DALL-E, and Sora.",
+        "trajectory": "Experiencing rapid growth and expansion, OpenAI secured $40 billion in Series F funding in March 2025, reaching a $300 billion valuation, and has made several strategic acquisitions including io for $6.5 billion.",
+        "category": "private"
     }
 ]

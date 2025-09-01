@@ -412,5 +412,11 @@
         "status": "Active, privately held, and has raised a total of $4.5M in seed funding across two rounds.",
         "trajectory": "Founded in 2022, Langfuse is an open-source observability and analytics platform for LLM applications that has experienced rapid growth, securing seed funding and expanding its platform to help teams build, monitor, evaluate, and debug AI applications.",
         "category": "private"
+    },
+    {
+        "company": "OpenPipe AI",
+        "status": "Active, successfully closed a $6.7 million seed funding round in March 2024.",
+        "trajectory": "The company is focused on simplifying the fine-tuning and deployment of application-specific Large Language Models (LLMs), aiming to provide more cost-effective and accurate solutions than larger general-purpose models. They are part of Y Combinator's Summer 2023 cohort and have saved customers over $3 million in inference costs since September 2023.",
+        "category": "private"
     }
 ]

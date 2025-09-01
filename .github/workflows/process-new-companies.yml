@@ -40,8 +40,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add wooginawunan.github.io/assets/data/companies.json
-          git add wooginawunan.github.io/assets/data/references.json
+          git add assets/data/companies.json
+          git add assets/data/references.json
           git commit -m "chore: add companies from #${{ github.event.issue.number }}"
           git push
 

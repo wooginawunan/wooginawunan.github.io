@@ -182,7 +182,7 @@
                 <section id="suggest" class="mt-8 p-6 bg-white rounded-xl shadow-sm">
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">Suggest New Companies</h3>
                     <p class="text-sm text-gray-600 mb-4">
-                        Paste any text or a URL. We’ll try to extract company names locally to show what’s already in the list.
+                        Paste any text or a URL. Company names will be detected automatically and shown below.
                         Submitting opens a pre-filled GitHub Issue so an automated workflow can verify with an LLM and update the data.
                     </p>
 
@@ -190,7 +190,6 @@
                         <textarea id="suggest-input" class="w-full border rounded-md p-3 text-sm" rows="4" placeholder="Paste companies or a link..."></textarea>
 
                         <div class="flex items-center gap-2 flex-wrap">
-                            <button id="analyze-btn" class="filter-btn px-4 py-2 rounded-lg">Analyze Locally</button>
                             <button id="submit-btn" class="filter-btn px-4 py-2 rounded-lg">Submit to GitHub</button>
                             <span id="analyze-hint" class="text-xs text-gray-600"></span>
                         </div>
@@ -240,7 +239,6 @@
                     tableBody: document.getElementById('company-table-body'),
                     noResults: document.getElementById('no-results'),
                     suggestInput: document.getElementById('suggest-input'),
-                    analyzeBtn: document.getElementById('analyze-btn'),
                     submitBtn: document.getElementById('submit-btn'),
                     analyzeResults: document.getElementById('analyze-results'),
                     chips: document.getElementById('chips'),
@@ -382,6 +380,13 @@
                     els.analyzeHint.textContent = lastDetected.length ? '' : 'Tip: paste a list or a URL.';
                 };
 
+                // Auto-analyze with debouncing
+                let analyzeTimeout;
+                const autoAnalyze = () => {
+                    clearTimeout(analyzeTimeout);
+                    analyzeTimeout = setTimeout(onAnalyze, 300); // 300ms debounce
+                };
+
                 const buildIssueURL = (detected, rawInput) => {
                     const owner = 'wooginawunan';
                     const repo = 'wooginawunan.github.io';
@@ -423,7 +428,8 @@
                         renderTable(dataAll);
                         els.filterControls.addEventListener('click', onFilterClick);
                         // Wire suggest UI
-                        els.analyzeBtn?.addEventListener('click', onAnalyze);
+                        els.suggestInput?.addEventListener('input', autoAnalyze);
+                        els.suggestInput?.addEventListener('paste', () => setTimeout(autoAnalyze, 50)); // Slight delay for paste
                         els.submitBtn?.addEventListener('click', onSubmit);
                     } catch (err) {
                         console.error('Error fetching company data:', err);

@@ -26,12 +26,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests pydantic google-genai>=1.0.0
 
-      - name: Debug file structure
-        run: |
-          echo "Repository path: ${{ github.workspace }}"
-          ls -la assets/data/ || echo "assets/data directory not found"
-          ls -la .github/scripts/process_new_companies.py || echo "Script not found"
-
       - name: Run processor
         id: proc
         env:

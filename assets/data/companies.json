@@ -304,5 +304,11 @@
         "status": "A leading organization in the AI sector, actively developing and deploying advanced AI models such as GPT, DALL-E, and Sora.",
         "trajectory": "Experiencing rapid growth and expansion, OpenAI secured $40 billion in Series F funding in March 2025, reaching a $300 billion valuation, and has made several strategic acquisitions including io for $6.5 billion.",
         "category": "private"
+    },
+    {
+        "company": "Elad Gil",
+        "status": "Elad Gil is a prominent entrepreneur, active investor, and advisor in the technology and startup sectors. He co-founded Color Health and Mixer Labs (acquired by Twitter), and manages Gil Capital, a significant venture fund.",
+        "trajectory": "His career trajectory includes leadership roles at Google (starting the mobile team) and Twitter (VP of Corporate Strategy), evolving into a highly influential solo venture capitalist who has made early investments in over 30 unicorn startups.",
+        "category": "private"
     }
 ]

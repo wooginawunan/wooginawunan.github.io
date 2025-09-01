@@ -370,5 +370,35 @@
         "status": "Active",
         "trajectory": "EvolutionaryScale emerged from stealth in June 2024 with $142 million in seed funding. The company is developing an AI model called ESM3 to design novel proteins and aims to partner with pharmaceutical companies for drug discovery.",
         "category": "private"
+    },
+    {
+        "company": "H Company",
+        "status": "H Company, founded in 2024, emerged from stealth mode in May 2024 with a $220 million seed funding round and raised an additional $100K in debt funding in December 2023. The company also acquired Mithril Security in January 2024 and has an upcoming Early Stage VC round.",
+        "trajectory": "This Paris-based AI startup is focused on developing a new generation of \"action-oriented\" or \"multi-agent\" AI models with the ambition of achieving Artificial General Intelligence (AGI).",
+        "category": "private"
+    },
+    {
+        "company": "Manifold (AI-enabled life sciences research platform)",
+        "status": "Manifold, founded in 2021, has raised a total of $21.8 million in funding. This includes a $1.8 million seed round in October 2020 and a $20 million Series B round in April 2025.",
+        "trajectory": "This company is developing an AI-enabled life sciences research platform designed to transform R&D operations by managing controlled-access multimodal data.",
+        "category": "private"
+    },
+    {
+        "company": "Shanghai Artificial Intelligence Laboratory",
+        "status": "This appears to be a state-backed research institution, not a typical for-profit company with traditional funding rounds or valuations.",
+        "trajectory": "The Shanghai Artificial Intelligence Laboratory, linked to shlab.org.cn, is likely involved in AI research and development initiatives, possibly supported by government funds and partnerships, like the Pudong New Area's AI seed fund.",
+        "category": "other (state-backed research institution)"
+    },
+    {
+        "company": "Interact (Fellowship)",
+        "status": "Founded in 2012, Interact is a fellowship of technologists and a community, rather than a traditional company that raises funding rounds or has a valuation.",
+        "trajectory": "Interact operates as a voluntarily organized fellowship led by former Fellows, aiming to bring together technologists to build friendships, co-found ventures, and achieve impactful missions.",
+        "category": "other (fellowship)"
+    },
+    {
+        "company": "Twelve Labs",
+        "status": "Twelve Labs, founded in 2021, has raised a total of $107 million over five funding rounds. This includes a $50 million Series A in June 2024 and a $30 million Series A in December 2024. The company has not made any acquisitions.",
+        "trajectory": "Based in San Francisco and Seattle, Twelve Labs is a Series A company developing a multimodal AI platform that makes video foundation models accessible for building video products and analyzing content with human-like understanding.",
+        "category": "private"
     }
 ]

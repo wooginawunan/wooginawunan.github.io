@@ -406,5 +406,11 @@
         "status": "Active, well-funded.",
         "trajectory": "Founded in 2024 by the creators of Stable Diffusion, the company quickly raised a $31 million seed round led by Andreessen Horowitz. It is reportedly seeking to raise an additional $100-$200 million, which would value the company at over $1 billion. Black Forest Labs develops state-of-the-art generative AI models, including the FLUX.1 suite, which powers image generation for Elon Musk's Grok.",
         "category": "private"
+    },
+    {
+        "company": "Langfuse",
+        "status": "Active, privately held, and has raised a total of $4.5M in seed funding across two rounds.",
+        "trajectory": "Founded in 2022, Langfuse is an open-source observability and analytics platform for LLM applications that has experienced rapid growth, securing seed funding and expanding its platform to help teams build, monitor, evaluate, and debug AI applications.",
+        "category": "private"
     }
 ]

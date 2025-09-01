@@ -398,8 +398,8 @@
                         for (const d of detected) bodyLines.push(`- ${d}`);
                     }
                     const body = encodeURIComponent(bodyLines.join('\n'));
-                    // If you add an issue template named new_company.yml, you can add `&template=new_company.yml`
-                    return `https://github.com/${owner}/${repo}/issues/new?title=${title}&labels=company-request&body=${body}`;
+                    // Using the new_company.yml issue template
+                    return `https://github.com/${owner}/${repo}/issues/new?template=new_company.yml&title=${title}&labels=company-request&body=${body}`;
                 };
 
                 const onSubmit = () => {

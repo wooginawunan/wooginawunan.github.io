@@ -169,7 +169,7 @@ def main():
             save_references(REFERENCES_JSON, existing_references + references)
     
         set_output('changed', 'true' if changed else 'false')
-        set_output('added_names', ", ".join([a['company'] for a in added]))
+        set_output('added_names', ", ".join([a.company for a in added]))
         set_output('error', '')
         
     except Exception as e:

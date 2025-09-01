@@ -176,7 +176,32 @@
                         </table>
                         <p id="no-results" class="text-center text-gray-500 py-12 hidden">No companies match your criteria.</p>
                     </div>
-                                </section>
+                </section>
+
+                <!-- Suggest Companies (client-side parse + GitHub Issue handoff) -->
+                <section id="suggest" class="mt-8 p-6 bg-white rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Suggest New Companies</h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Paste any text or a URL. We’ll try to extract company names locally to show what’s already in the list.
+                        Submitting opens a pre-filled GitHub Issue so an automated workflow can verify with an LLM and update the data.
+                    </p>
+
+                    <div class="space-y-3">
+                        <textarea id="suggest-input" class="w-full border rounded-md p-3 text-sm" rows="4" placeholder="Paste companies or a link..."></textarea>
+
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <button id="analyze-btn" class="filter-btn px-4 py-2 rounded-lg">Analyze Locally</button>
+                            <button id="submit-btn" class="filter-btn px-4 py-2 rounded-lg">Submit to GitHub</button>
+                            <span id="analyze-hint" class="text-xs text-gray-600"></span>
+                        </div>
+
+                        <div id="analyze-results" class="hidden">
+                            <div class="mt-2 text-sm text-gray-700 font-medium">Detected companies</div>
+                            <div id="chips" class="flex flex-wrap gap-2 mt-2"></div>
+                            <div id="summary" class="text-xs text-gray-600 mt-2"></div>
+                        </div>
+                    </div>
+                </section>
             </main>
             <div class="border-t border-gray-200 my-8"></div>
 
@@ -214,6 +239,13 @@
                     filterControls: document.getElementById('filter-controls'),
                     tableBody: document.getElementById('company-table-body'),
                     noResults: document.getElementById('no-results'),
+                    suggestInput: document.getElementById('suggest-input'),
+                    analyzeBtn: document.getElementById('analyze-btn'),
+                    submitBtn: document.getElementById('submit-btn'),
+                    analyzeResults: document.getElementById('analyze-results'),
+                    chips: document.getElementById('chips'),
+                    summary: document.getElementById('summary'),
+                    analyzeHint: document.getElementById('analyze-hint'),
                 };
 
                 // Category helpers
@@ -228,6 +260,8 @@
 
                 let currentFilter = 'all';
                 let dataAll = [];
+                let knownSet = new Set();
+                let lastDetected = [];
 
                 const normalize = (s) => (s || '').toString().trim().toLowerCase();
                 const getStatusCategory = (statusText) => {
@@ -288,6 +322,91 @@
                     applyFilter();
                 };
 
+                // Lightweight extraction: split on separators, drop obvious non-names; keep capitalized tokens and lines
+                const detectCompanies = (text) => {
+                    const input = (text || '').trim();
+                    if (!input) return [];
+                    // If it looks like a URL, just pass it through as one item
+                    if (/^https?:\/\//i.test(input)) return [input];
+
+                    // Split by newline or commas/semicolon/pipes
+                    const parts = input
+                        .split(/\n|,|;|\||\t|•|\u2022|\uff0c/g)
+                        .map(s => s.trim())
+                        .filter(Boolean);
+
+                    const clean = parts.map(p => {
+                        // Remove trailing descriptors in parentheses/brackets
+                        return p.replace(/\s*\([^)]*\)\s*$/, '')
+                                .replace(/\s*\[[^\]]*\]\s*$/, '')
+                                .replace(/^[-–•\d.\s]+/, '')
+                                .trim();
+                    }).filter(Boolean);
+
+                    // Heuristic: keep tokens with at least one capital letter or known brand-like chars
+                    const candidates = new Set();
+                    for (const c of clean) {
+                        if (/^https?:\/\//i.test(c)) { candidates.add(c); continue; }
+                        if (/[A-Z]/.test(c) || /[A-Za-z]+\s+[A-Za-z]+/.test(c)) {
+                            // Avoid super-common words
+                            const l = c.toLowerCase();
+                            if (!['public','private','acquired','inc','llc','corp','company','the','and','or','a','an'].includes(l)) {
+                                candidates.add(c);
+                            }
+                        }
+                    }
+                    return Array.from(candidates);
+                };
+
+                const renderChips = (items) => {
+                    els.chips.innerHTML = '';
+                    const frag = document.createDocumentFragment();
+                    let newCount = 0, existCount = 0;
+                    for (const it of items) {
+                        const exists = knownSet.has(normalize(it));
+                        const span = document.createElement('span');
+                        span.className = `px-2 py-1 rounded-full text-xs border ${exists ? 'bg-green-50 border-green-300 text-green-800' : 'bg-amber-50 border-amber-300 text-amber-800'}`;
+                        span.textContent = it + (exists ? ' • existing' : ' • new?');
+                        frag.appendChild(span);
+                        exists ? existCount++ : newCount++;
+                    }
+                    els.chips.appendChild(frag);
+                    els.summary.textContent = `${items.length} detected • ${existCount} existing • ${newCount} potentially new`;
+                    els.analyzeResults.classList.toggle('hidden', items.length === 0);
+                };
+
+                const onAnalyze = () => {
+                    const text = els.suggestInput.value;
+                    lastDetected = detectCompanies(text);
+                    renderChips(lastDetected);
+                    els.analyzeHint.textContent = lastDetected.length ? '' : 'Tip: paste a list or a URL.';
+                };
+
+                const buildIssueURL = (detected, rawInput) => {
+                    const owner = 'wooginawunan';
+                    const repo = 'wooginawunan.github.io';
+                    const title = encodeURIComponent('New company request');
+                    const bodyLines = [];
+                    bodyLines.push('User submitted companies or URL:');
+                    bodyLines.push('');
+                    bodyLines.push('```');
+                    bodyLines.push((rawInput || '').trim());
+                    bodyLines.push('```');
+                    bodyLines.push('');
+                    if (detected.length) {
+                        bodyLines.push('Detected candidates:');
+                        for (const d of detected) bodyLines.push(`- ${d}`);
+                    }
+                    const body = encodeURIComponent(bodyLines.join('\n'));
+                    // If you add an issue template named new_company.yml, you can add `&template=new_company.yml`
+                    return `https://github.com/${owner}/${repo}/issues/new?title=${title}&labels=company-request&body=${body}`;
+                };
+
+                const onSubmit = () => {
+                    const url = buildIssueURL(lastDetected, els.suggestInput.value);
+                    window.open(url, '_blank');
+                };
+
                 const init = async () => {
                     document.querySelectorAll('.filter-btn').forEach(b => {
                         b.setAttribute('aria-pressed', String(b.classList.contains('active')));
@@ -298,8 +417,12 @@
                         if (!res.ok) throw new Error(`HTTP ${res.status}`);
                         const raw = await res.json();
                         dataAll = raw.map(c => ({ ...c, category: c.category || getStatusCategory(c.status || '') }));
+                        knownSet = new Set(dataAll.map(c => normalize(c.company)));
                         renderTable(dataAll);
                         els.filterControls.addEventListener('click', onFilterClick);
+                        // Wire suggest UI
+                        els.analyzeBtn?.addEventListener('click', onAnalyze);
+                        els.submitBtn?.addEventListener('click', onSubmit);
                     } catch (err) {
                         console.error('Error fetching company data:', err);
                         els.tableBody.innerHTML = '<tr><td colspan="4" class="px-4 py-6 text-center text-red-500">Failed to load company data.</td></tr>';

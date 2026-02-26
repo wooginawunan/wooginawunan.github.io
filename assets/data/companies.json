@@ -418,5 +418,11 @@
         "status": "Active, successfully closed a $6.7 million seed funding round in March 2024.",
         "trajectory": "The company is focused on simplifying the fine-tuning and deployment of application-specific Large Language Models (LLMs), aiming to provide more cost-effective and accurate solutions than larger general-purpose models. They are part of Y Combinator's Summer 2023 cohort and have saved customers over $3 million in inference costs since September 2023.",
         "category": "private"
+    },
+    {
+        "company": "Betteromics",
+        "status": "Active. The company raised $20 million in Series A financing in October 2023, with some reports indicating an extension to $25 million due to investor interest.",
+        "trajectory": "Growing, with plans to expand its team and scale marketing and sales efforts. Betteromics is focused on revolutionizing life sciences and healthcare data synthesis using AI-driven data connections and a clinical-grade compliant SaaS platform.",
+        "category": "private"
     }
 ]

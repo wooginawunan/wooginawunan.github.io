@@ -37,9 +37,11 @@ href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
 <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
 <!--     <div class="banner"></div> -->
     <div class="banner-top">
- 
+        {% if page.header_image %}
+        <img src="{{ page.header_image }}">
+        {% else %}
         <img src="http://wooginawunan.github.io/assets/img/profile_p.jpg">
-      
+        {% endif %}
     </div>
     <div class="wrapper">
         {{ content }}

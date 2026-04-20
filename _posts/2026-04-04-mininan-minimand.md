@@ -200,12 +200,13 @@ Not just as information —  but as **shape**, as **patterns**, as **landscape**
 
 > **What I want is clarity — in thought, in priorities, in the inner landscape behind them.**
 
-<details class="install-box">
+<details class="install-box" markdown="1">
 <summary>Try MiniMand</summary>
 
 Download: [MiniMand-v0.1.zip](https://drive.google.com/file/d/1Bc8RcglljX9qH_gCgs3Lo2ZgKcVbQkHO/view?usp=share_link) *(restricted access — permission request required)*
 
 **Install:**
+
 1. Unzip the file.
 2. Drag `MiniMand.app` to `/Applications`.
 3. Right-click `MiniMand.app` → **Open** (first launch only, to bypass Gatekeeper).

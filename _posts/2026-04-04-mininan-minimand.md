@@ -124,6 +124,55 @@ pre {
   font-size: 14px;
   line-height: 1.4;
 }
+
+.install-box {
+  background: #f8fbfb;
+  border: 1px solid #dceaea;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin: 24px 0;
+  font-size: 0.88em;
+  color: #555;
+}
+
+.install-box summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #2a6b6b;
+  font-size: 1em;
+  padding: 4px 0;
+  list-style: none;
+}
+
+.install-box summary::-webkit-details-marker {
+  display: none;
+}
+
+.install-box summary::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 0.2s;
+  margin-right: 4px;
+}
+
+.install-box[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.install-box ol {
+  margin: 8px 0;
+  padding-left: 22px;
+}
+
+.install-box li {
+  margin: 3px 0;
+  line-height: 1.5;
+}
+
+.install-box p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
 </style>
 
 We live in a world where information is constantly thrown at us — especially now, with AI. And for me, even more so: *I work on AI, I think fast, I get pulled in many directions — very ADHD, haha*.
@@ -151,23 +200,19 @@ Not just as information —  but as **shape**, as **patterns**, as **landscape**
 
 > **What I want is clarity — in thought, in priorities, in the inner landscape behind them.**
 
-**Download and Install**
+<details class="install-box">
+<summary>Try MiniMand</summary>
 
-Download MiniMand here: [MiniMand-v0.1.zip](https://drive.google.com/file/d/1Bc8RcglljX9qH_gCgs3Lo2ZgKcVbQkHO/view?usp=share_link) *(restricted access; permission request required)*.
+Download: [MiniMand-v0.1.zip](https://drive.google.com/file/d/1Bc8RcglljX9qH_gCgs3Lo2ZgKcVbQkHO/view?usp=share_link) *(restricted access — permission request required)*
 
-To install:
-
+**Install:**
 1. Unzip the file.
 2. Drag `MiniMand.app` to `/Applications`.
-3. Right-click `MiniMand.app` -> **Open** (first launch only, to bypass Gatekeeper).
+3. Right-click `MiniMand.app` → **Open** (first launch only, to bypass Gatekeeper).
 
-If macOS blocks MiniMand because it is not from an identified developer:
+**If macOS blocks it** (unidentified developer): click **Done**, then go to **System Settings → Privacy & Security**, scroll to the "MiniMand was blocked" message, click **Open Anyway**, then **Open**.
 
-1. Click **Done** to dismiss the dialog.
-2. Go to **System Settings > Privacy & Security**.
-3. Scroll down - you will see a message like **"MiniMand" was blocked from use because it is not from an identified developer**.
-4. Click **Open Anyway**.
-5. It will ask one more time - click **Open**.
+</details>
 
 **A Simpler Way to Think About It**
 

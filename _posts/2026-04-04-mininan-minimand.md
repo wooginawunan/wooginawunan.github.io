@@ -169,6 +169,24 @@ And when you want more detail, you can link a node to Apple Notes.
 
 Shape your thinking in MiniMand. Keep the details in Apple Notes — or anywhere else.
 
+## Download (Google Drive)
+
+Download MiniMand here: [MiniMand-v0.1.zip](https://drive.google.com/file/d/1Bc8RcglljX9qH_gCgs3Lo2ZgKcVbQkHO/view?usp=share_link) *(restricted access; permission request required)*.
+
+### Install
+
+1. Unzip the file.
+2. Drag `MiniMand.app` to `/Applications`.
+3. Right-click `MiniMand.app` -> **Open** (first launch only, to bypass Gatekeeper).
+
+If macOS blocks MiniMand because it is not from an identified developer, use the steps below:
+
+1. Click **Done** to dismiss the dialog.
+2. Go to **System Settings > Privacy & Security**.
+3. Scroll down - you will see a message like **"MiniMand" was blocked from use because it is not from an identified developer**.
+4. Click **Open Anyway**.
+5. It will ask one more time - click **Open**.
+
 ## How It Works
 
 MiniMand is a canvas of **nodes** — either **Notes** (individual thoughts) or **Threads** (hubs that anchor a cluster) - connected with **edges**. Each node carries a title, a color-coded tag, and a status.

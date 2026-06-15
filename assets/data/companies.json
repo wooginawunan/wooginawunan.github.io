@@ -424,5 +424,11 @@
         "status": "Active. The company raised $20 million in Series A financing in October 2023, with some reports indicating an extension to $25 million due to investor interest.",
         "trajectory": "Growing, with plans to expand its team and scale marketing and sales efforts. Betteromics is focused on revolutionizing life sciences and healthcare data synthesis using AI-driven data connections and a clinical-grade compliant SaaS platform.",
         "category": "private"
+    },
+    {
+        "company": "ZeroEntropy",
+        "status": "Active",
+        "trajectory": "Growing, having secured a $4.2M seed round in July 2025 to develop its AI search infrastructure and expand its team and offerings.",
+        "category": "private"
     }
 ]

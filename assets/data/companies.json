@@ -430,5 +430,11 @@
         "status": "Active",
         "trajectory": "Growing, having secured a $4.2M seed round in July 2025 to develop its AI search infrastructure and expand its team and offerings.",
         "category": "private"
+    },
+    {
+        "company": "Mixedbread",
+        "status": "Active, venture capital-backed, and generating revenue.",
+        "trajectory": "The company is growing, having recently secured $5.5 million in seed funding to scale research and development and expand operations in the AI information retrieval space.",
+        "category": "private"
     }
 ]
